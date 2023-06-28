@@ -1,25 +1,41 @@
 {
   "id": "ed4-language-provider",
   "title": "Earthdawn Language Provider",
-  "description": "Language provider for the Earthdawn 4th Edition game system for the Polyglot module for Foundry VTT.",
-  "version": "1.0",
+  "version": "1.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "polyglot",
+        "type": "module"
+      }
+    ],
+    "recommends": [
+      {
+        "id": "earthdawn-pg-compendium",
+        "type": "module"
+      }
+    ]
+  },
+  "description": "Language provider for the Earthdawn 4th Edition game system for the Polyglot module for Foundry VTT",
   "authors": [
     {
       "name": "CaptJack2883",
-      "flags": {}
+      "discord": "captjack2883",
+      "email": "captjack2883@gmail.com",
+      "url": "https://github.com/CaptJack2883"
     }
   ],
-  "compatibility": {
-    "minimum": "10",
-    "verified": "10"
-  },
   "url": "https://github.com/CaptJack2883/ed4-language-provider",
-  "manifest": "https://github.com/CaptJack2883/ed4-language-provider/releases/latest/download/module.json",
-  "download": "https://github.com/CaptJack2883/ed4-language-provider/releases/download/1.4.2/module.zip",
+  "manifest": "https://github.com/CaptJack2883/ed4-language-provider/releases/download/v1.0/module.json",
+  "download": "https://github.com/CaptJack2883/ed4-language-provider/releases/download/v1.0/module.zip",
   "readme": "https://github.com/CaptJack2883/ed4-language-provider",
   "bugs": "https://github.com/CaptJack2883/ed4-language-provider/issues",
   "changelog": "https://github.com/CaptJack2883/ed4-language-provider/blob/master/CHANGELOG.md",
   "esmodules": [
     "scripts/ed4-language-provider.js"
-  ],
+  ]
 }
