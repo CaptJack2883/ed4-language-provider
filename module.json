@@ -36,6 +36,6 @@
   "bugs": "https://github.com/CaptJack2883/ed4-language-provider/issues",
   "changelog": "https://github.com/CaptJack2883/ed4-language-provider/blob/master/CHANGELOG.md",
   "esmodules": [
-    "scripts/ed4-language-provider.js"
+    "ed4-language-provider.js"
   ]
 }
