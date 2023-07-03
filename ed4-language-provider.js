@@ -1,8 +1,8 @@
 Hooks.once("polyglot.init", (LanguageProvider) => {
 	let ed4Welcome = new ChatMessage(): "Earthdawn Language Provider has loaded.";
-	ChatLog.postOne(message: ed4Welcome,): Promise<void>
+	ChatLog.postOne(message: ed4Welcome,);
     export class earthdawnV4LanguageProvider extends LanguageProvider {
-	get originalAlphabets() {
+		get originalAlphabets() {
 			return {
 				arciela: "200% ArCiela",
 				aztec: "200% Aztec",
@@ -68,27 +68,7 @@ Hooks.once("polyglot.init", (LanguageProvider) => {
 				windling: "ophidian",
 			};
 		}
-		async getLanguages() {
-			const langs = {};
-			for (let lang in this.originalTongues) {
-				langs[lang] = lang;
-			}
-			this.languages = langs;
-		}
-		get settings() {
-			return {
-				LanguageRegex: {
-				type: String,
-				default: game.i18n.localize("POLYGLOT.Generic.Language"),
-			},
-			LiteracyRegex: {
-				name: "Literacy Regex",
-				hint: "Same as Language Regex, but for written languages.",
-				type: String,
-				default: "Speak",
-			},
-			};
-		}
+		
 		getUserLanguages(actor) {
 			let knownLanguages = new Set();
 			let literateLanguages = new Set();
@@ -115,10 +95,7 @@ Hooks.once("polyglot.init", (LanguageProvider) => {
 			}
 			return [knownLanguages, literateLanguages];
 		}
-	
-		conditions(lang) {
-			return game.polyglot.literateLanguages.has(lang);
-		}
+		
 	}
     game.polyglot.api.registerModule("ed4-language-provider", earthdawnV4LanguageProvider)
 })
